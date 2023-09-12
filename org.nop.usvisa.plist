@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+
+        <key>Label</key>
+        <string>org.nop.usvisa</string>
+
+        <key>RunAtLoad</key>
+        <true/>
+
+        <key>StartInterval</key>
+        <integer>600</integer>
+
+        <key>StandardErrorPath</key>
+        <string>/path/to/stderr.log</string>
+
+        <key>StandardOutPath</key>
+        <string>/path/to/stdout.log</string>
+
+        <key>EnvironmentVariables</key>
+        <dict>
+            <key>PATH</key>
+            <string><![CDATA[/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin]]></string>
+        </dict>
+
+        <key>WorkingDirectory</key>
+        <string>/path/to/dir/with/the/bot/jar</string>
+
+        <key>ProgramArguments</key>
+        <array>
+            <string>/path/to/java</string> <!-- Ex. /Users/me/.sdkman/candidates/java/current/bin/java -->
+            <string>-jar</string>
+            <string>visa-appointment-scheduler-0.0.1-SNAPSHOT.jar</string>
+        </array>
+    </dict>
+</plist>

@@ -1,0 +1,28 @@
+spring:
+  main:
+    web-application-type: none
+
+telegram:
+  base-uri: "https://api.telegram.org"
+  # Your telegram bot api token
+  token: ""
+  # After inviting the bot into your chat, open it in a browser
+  # and copy chat id from the URL. It could be a negative number like "-943422342"
+  chat-id: ""
+  # Optional:
+  # Note the first messageId produced by the bot and
+  # set telegram.statusMessageId to it
+  # This way you'll get notifications only if a sooner appointment is found
+  #
+  # message id is an integer counter starting with 1 in the chat
+  # for me it was "4"
+  status-message-id: ""
+
+visa:
+  user:
+    # Plaintext, not very secure, but does the job
+    # Why this is needed: the app logs in via UI just like you would do
+    username: ""
+    password: ""
+    schedule-id: ""   # your schedule id, a number like "51437444"
+    facility-id: "95"         # Vancouver, BC

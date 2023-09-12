@@ -20,3 +20,6 @@
 14. `launchctl load ~/Library/LaunchAgents/org.nop.usvisa.plist`
 15. `tail -f {here's your StandardErrorPath or StandardOutPath}` to see logs in action
 16. How to stop: `launchctl unload ~/Library/LaunchAgents/org.nop.usvisa.plist`
+
+## Acknowledgment
+Thanks to @dvalbuena1 and his work at https://github.com/dvalbuena1/visa_rescheduler_aws/tree/main

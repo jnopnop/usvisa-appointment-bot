@@ -17,7 +17,11 @@ import java.util.List;
 public class ChromeProperties {
     @NotBlank
     @Builder.Default
-    String path = "/usr/local/bin/chromedriver";
+    String chromeDriverPath = "/usr/local/bin/chromedriver";
+
+    @NotBlank
+    @Builder.Default
+    String chromePath = "/usr/local/bin/chrome";
 
     @NotNull
     @Builder.Default
@@ -26,9 +30,14 @@ public class ChromeProperties {
     @NotNull
     @Builder.Default
     List<String> arguments = List.of(
-            "--window-size=1440,900",
-            "--ignore-certificate-errors",
-            "--silent",
-            "--headless" // remove this arg to see the browser
+            "--headless=new",
+            "--no-sandbox",
+            "--disable-gpu",
+            "--window-size=1280x1696",
+            "--single-process",
+            "--disable-dev-shm-usage",
+            "--disable-dev-tools",
+            "--no-zygote",
+            "--remote-debugging-port=9222"
     );
 }

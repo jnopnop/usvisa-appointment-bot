@@ -25,8 +25,9 @@ public class AppConfiguration {
 
     @Bean(destroyMethod = "close")
     public WebDriver driver(ChromeProperties chromeProperties) {
-        System.setProperty("webdriver.chrome.driver", chromeProperties.getPath());
+        System.setProperty("webdriver.chrome.driver", chromeProperties.getChromeDriverPath());
         ChromeOptions options = new ChromeOptions();
+        options.setBinary(chromeProperties.getChromePath());
         options.addArguments(chromeProperties.getArguments());
         ChromeDriver driver = new ChromeDriver(options);
         driver.manage().timeouts().implicitlyWait(chromeProperties.getUiTimeout());
